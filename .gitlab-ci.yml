@@ -1,8 +1,8 @@
 stages:
-  - build
+  - deploy
 
-build:
-  stage: build
+pages:
+  stage: deploy
   image: node
   only:
     - main
