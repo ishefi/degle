@@ -89,21 +89,6 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
         A new <Flagle /> will be available every day!
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <div className="font-bold">Any question or suggestion?</div>
-        <div>
-          Check the{" "}
-          <a
-            className="underline"
-            href="https://worldle.notion.site/Worldle-b84ab0f002e34866980a4d47cf9291b7"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Flagle FAQ
-          </a>
-          !
-        </div>
-      </div>
-      <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         You can think of <Flagle /> as a{" "}
         <span className="font-bold">rip-off</span> of{" "}
         <a
