@@ -11,7 +11,8 @@ build:
     - npm install
     - npm run build
     - echo "Build successfully!
+    - mv build public
   artifacts:
     paths:
-      - build/
+      - public/
 
