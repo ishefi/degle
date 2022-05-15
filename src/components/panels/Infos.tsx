@@ -1,7 +1,7 @@
 import { Guesses } from "../Guesses";
 import { Panel } from "./Panel";
 import React from "react";
-import { Worldle } from "../Worldle";
+import { Worldle, Flagle } from "../Worldle";
 import { formatDistance } from "../../domain/geography";
 import { SettingsData } from "../../hooks/useSettings";
 import { Twemoji } from "@teuteuf/react-emoji-render";
@@ -17,7 +17,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
     <Panel title="How to play" isOpen={isOpen} close={close}>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div>
-          Guess the <Worldle /> in 6 guesses.
+          Guess the <Flagle /> in 6 guesses.
         </div>
         <div>Each guess must be a valid country, territory, ...</div>
         <div>
@@ -86,7 +86,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3 font-bold">
-        A new <Worldle /> will be available every day!
+        A new <Flagle /> will be available every day!
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div className="font-bold">Any question or suggestion?</div>
@@ -98,30 +98,30 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Worldle FAQ
+            Flagle FAQ
           </a>
           !
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <Worldle /> has been <span className="font-bold">heavily</span> inspired
-        by{" "}
+        You can think of <Flagle /> as a{" "}
+        <span className="font-bold">rip-off</span> of{" "}
         <a
           className="underline"
-          href="https://www.powerlanguage.co.uk/wordle/"
+          href="https://worldle.teuteuf.fr/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Wordle
+          <Worldle />
         </a>{" "}
         created by{" "}
         <a
           className="underline"
-          href="https://twitter.com/powerlanguish"
+          href="https://twitter.com/teuteuf"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Josh Wardle (@powerlanguish)
+          Antoine Teuf (@teuteuf)
         </a>
         .
       </div>
@@ -130,11 +130,11 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
           Made by{" "}
           <a
             className="underline"
-            href="https://twitter.com/teuteuf"
+            href="https://twitter.com/shefi89"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @teuteuf
+            @shefi89
           </a>{" "}
           - (
           <a
@@ -151,7 +151,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
           Want to support?{" "}
           <a
             className="underline"
-            href="https://www.ko-fi.com/teuteuf"
+            href="https://www.ko-fi.com/ishefi"
             target="_blank"
             rel="noopener noreferrer"
           >

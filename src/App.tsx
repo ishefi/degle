@@ -3,13 +3,11 @@ import "react-toastify/dist/ReactToastify.css";
 import { Game } from "./components/Game";
 import React, { useEffect, useMemo, useState } from "react";
 import { Infos } from "./components/panels/Infos";
+import { InfosHeb } from "./components/panels/InfosHeb";
 import { useTranslation } from "react-i18next";
-import { InfosFr } from "./components/panels/InfosFr";
-import { InfosHu } from "./components/panels/InfosHu";
-import { InfosNl } from "./components/panels/InfosNl";
 import { Settings } from "./components/panels/Settings";
 import { useSettings } from "./hooks/useSettings";
-import { Worldle } from "./components/Worldle";
+import { Flagle } from "./components/Worldle";
 import { Stats } from "./components/panels/Stats";
 import { Twemoji } from "@teuteuf/react-emoji-render";
 import { getDayString, useTodays } from "./hooks/useTodays";
@@ -39,19 +37,30 @@ export default function App() {
   }, [settingsData.theme]);
 
   let InfosComponent;
+  let TitleComponent = function DefaultTitle() {
+    return (
+      <h1 className="text-4xl font-bold uppercase tracking-wide text-center my-1 flex-auto">
+        Flag<span className="text-green-600">l</span>e
+      </h1>
+    );
+  };
+  let dir = "ltr";
   switch (i18n.resolvedLanguage) {
-    case "fr":
-      InfosComponent = InfosFr;
-      break;
-    case "hu":
-      InfosComponent = InfosHu;
-      break;
-    case "nl":
-      InfosComponent = InfosNl;
+    case "he":
+      InfosComponent = InfosHeb;
+      TitleComponent = function HebTitle() {
+        return (
+          <h1 className="text-4xl font-bold uppercase tracking-wide text-center my-1 flex-auto">
+            דעג<span className="text-green-600">ע</span>ל
+          </h1>
+        );
+      };
+      dir = "rtl";
       break;
     default:
       InfosComponent = Infos;
   }
+  document.documentElement.dir = dir;
 
   return (
     <>
@@ -64,6 +73,7 @@ export default function App() {
         bodyClassName="font-bold text-center"
         toastClassName="flex justify-center m-2 max-w-full"
         style={{ width: 500, maxWidth: "100%" }}
+        rtl={dir == "rtl"}
       />
       <InfosComponent
         isOpen={infoOpen}
@@ -91,9 +101,7 @@ export default function App() {
             >
               <Twemoji text="❓" />
             </button>
-            <h1 className="text-4xl font-bold uppercase tracking-wide text-center my-1 flex-auto">
-              Wor<span className="text-green-600">l</span>dle
-            </h1>
+            <TitleComponent />
             <button
               className="ml-3 text-xl"
               type="button"
@@ -115,7 +123,7 @@ export default function App() {
               text="❤️"
               className="flex items-center justify-center mr-1"
             />{" "}
-            <Worldle />? -
+            <Flagle />? -
             {country && supportLink[country.code] != null ? (
               <a
                 className="underline pl-1"
@@ -128,7 +136,7 @@ export default function App() {
             ) : (
               <a
                 className="underline pl-1"
-                href="https://www.ko-fi.com/teuteuf"
+                href="https://www.ko-fi.com/ishefi"
                 target="_blank"
                 rel="noopener noreferrer"
               >
