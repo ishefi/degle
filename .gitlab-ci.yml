@@ -11,8 +11,7 @@ pages:
     - npm install
     - npm run build
     - echo "Build successfully!"
-    - rm -rf public
-    - mv build public
+    - cp -r build/ public/
   artifacts:
     paths:
       - public/
