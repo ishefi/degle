@@ -1,0 +1,17 @@
+stages:
+  - build
+
+build:
+  stage: build
+  image: node
+  only:
+    - main
+  script: 
+    - echo "Start building App"
+    - npm run install
+    - npm run build
+    - echo "Build successfully!
+  artifacts:
+    paths:
+      - build/
+
