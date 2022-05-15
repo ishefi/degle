@@ -8,7 +8,7 @@ build:
     - main
   script: 
     - echo "Start building App"
-    - npm run install
+    - npm install
     - npm run build
     - echo "Build successfully!
   artifacts:
