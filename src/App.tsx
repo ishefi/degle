@@ -73,7 +73,7 @@ export default function App() {
         bodyClassName="font-bold text-center"
         toastClassName="flex justify-center m-2 max-w-full"
         style={{ width: 500, maxWidth: "100%" }}
-        rtl={dir == "rtl"}
+        rtl={dir === "rtl"}
       />
       <InfosComponent
         isOpen={infoOpen}
