@@ -1,4 +1,4 @@
-# FLAG**L**E
+# DEG**L**E
 A flag-version of https://worldle.teuteuf.fr.
 
 ## Resources used:
